@@ -4,7 +4,7 @@ const package = require('./package.json');
 const {BuildConfig, WebpackConfigBuilder, Version, DesignType, ModuleConfig} = require('@bsi-cx/design-build');
 
 const landingpageBuildConfig = new BuildConfig()
-  .withName('master-template-cx-22.0-landingpage')
+  .withName('bsi-elements-cx-22.0-landingpage')
   .withVersion(package.version)
   .withDesignType(DesignType.LANDINGPAGE)
   .withTargetVersion(Version.CX_22_0)
@@ -23,7 +23,7 @@ const landingpageBuildConfig = new BuildConfig()
       
 
 const websiteBuildConfig = new BuildConfig()
-  .withName('master-template-cx-22.0-website')
+  .withName('bsi-elements-cx-22.0-website')
   .withVersion(package.version)
   .withDesignType(DesignType.WEBSITE)
   .withTargetVersion(Version.CX_22_0)
@@ -41,28 +41,28 @@ const websiteBuildConfig = new BuildConfig()
   });
 
 module.exports = WebpackConfigBuilder.fromConfigs(
+  // websiteBuildConfig.clone()
+  //   .withName('bsi-elements-cx-1.3-website')
+  //   .withTargetVersion(Version.CX_1_3)
+  //   .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
+  // websiteBuildConfig.clone()
+  //   .withName('bsi-elements-cx-22.0-website')
+  //   .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
   websiteBuildConfig.clone()
-    .withName('master-template-cx-1.3-website')
-    .withTargetVersion(Version.CX_1_3)
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
-  websiteBuildConfig.clone()
-    .withName('master-template-cx-22.0-website')
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
-  websiteBuildConfig.clone()
-    .withName('master-template-cx-23.2-website')
+    .withName('bsi-elements-cx-23.2-website')
     .withTargetVersion(Version.CX_23_2)
     .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
+  // landingpageBuildConfig.clone()
+  //   .withName('bsi-elements-cx-1.3-landingpage-de')
+  //   .withTargetVersion(Version.CX_1_3)
+  //   .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
+  // landingpageBuildConfig.clone()
+  //   .withName('bsi-elements-cx-22.0-landingpage-de')
+  //   .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
   landingpageBuildConfig.clone()
-    .withName('master-template-cx-1.3-landingpage-de')
-    .withTargetVersion(Version.CX_1_3)
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
-  landingpageBuildConfig.clone()
-    .withName('master-template-cx-22.0-landingpage-de')
-    .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js')),
-  landingpageBuildConfig.clone()
-      .withName('master-template-cx-23.2-landingpage-de')
+      .withName('bsi-elements-cx-23.2-landingpage-de')
       .withTargetVersion(Version.CX_23_2)
       .withPropertiesFilePath(path.resolve(__dirname, 'properties-de.js'))
   /*landingpageBuildConfig.clone()
-    .withName('master-template-cx-22.0-landingpage-en')
+    .withName('bsi-elements-cx-22.0-landingpage-en')
     .withPropertiesFilePath(path.resolve(__dirname, 'properties-en.js'))*/);

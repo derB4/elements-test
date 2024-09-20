@@ -39,7 +39,7 @@ module.exports = cx.design
       /*.withLabel('Content')*/
       .withLabel('Inhalt')
       .withContentElements(
-        require('@bsi-cx/design-standard-library-web/content-elements/base/text').editor(require('../shared/configs/editor/formatted-text-editor')),
+        require('@bsi-cx/design-standard-library-web/content-elements/base/text'),
         require('@bsi-cx/design-standard-library-web/content-elements/base/figure'),
         require('@bsi-cx/design-standard-library-web/content-elements/base/banner'),
         require('@bsi-cx/design-standard-library-web/content-elements/base/button'),
@@ -53,7 +53,9 @@ module.exports = cx.design
         require('@bsi-cx/design-standard-library-web/content-elements/advanced/webcam-image-upload'),
         require('@bsi-cx/design-standard-library-web/content-elements/base/slot-finder'),
         require('@bsi-cx/design-standard-library-web/content-elements/base/chart'),
-        require('@bsi-cx/design-standard-library-web/content-elements/base/html')),
+        require('@bsi-cx/design-standard-library-web/content-elements/base/html'),
+        require('../shared/content-elements/timebased-trigger'),
+      ),
     cx.contentElementGroup
       .withGroupId('forms-NjbmnQ')
       /*.withLabel('Forms')*/
